@@ -1,0 +1,29 @@
+$advantages-color: #182533;
+
+.advantages {
+  color: white;
+  background: $advantages-color;
+  border-radius: 5px;
+  width: 12rem;
+  height: auto;
+  padding: .75rem;
+  margin: 1rem auto;
+
+  .list {
+    padding: 1rem 0 0 0;
+  }
+
+  &__item {
+    background: #0E1621;
+    text-align: center;
+    border-radius: 5px;
+    padding: .5rem;
+    &+.advantages__item {
+      margin-top: .5rem;
+    }
+    &--super {
+      color: #61dafb;
+      font-weight: bold;
+    }
+  }
+}

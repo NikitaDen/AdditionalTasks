@@ -1,15 +1,13 @@
 import React from "react";
-import Message from "./Message";
 import {connect} from "react-redux";
+import Advantages from "./Advantages";
 
 const stateToProps = (state) => {
     return {
-        fullName: state.user.fullName,
-        messageText: state.user.messageText,
-        messageTime: state.user.messageTime,
+        advantages: state.user.advantages,
     }
 };
 
-const MessageContainer = connect(stateToProps, null)(Message);
+const AdvantagesContainer = connect(stateToProps, null)(Advantages);
 
-export default MessageContainer;
+export default AdvantagesContainer;

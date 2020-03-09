@@ -1,11 +1,15 @@
 import React from "react";
+import Message from "./Message";
+import {connect} from "react-redux";
 
-const Message = () => {
-    return (
-        <div>
-
-        </div>
-    )
+const stateToProps = (state) => {
+    return {
+        fullName: state.user.fullName,
+        messageText: state.user.messageText,
+        messageTime: state.user.messageTime,
+    }
 };
 
-export default Message;
+const MessageContainer = connect(stateToProps, null)(Message);
+
+export default MessageContainer;

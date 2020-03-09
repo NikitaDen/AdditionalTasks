@@ -1,18 +1,14 @@
 import React from "react";
-import userPhoto from "../../images/avatar.jpg";
 
-let Message = (props) => {
+let Advantages = (props) => {
     return (
-        <div className='message'>
-            <img src={userPhoto} alt="photo" className="user-photo"/>
-            <div className="message__body">
-                {props.fullName}
-                <p>{props.messageText}</p>
-                <span>{props.messageTime}</span>
+        <div className='advantages'>
+            <h3>My Advantages</h3>
+            <div className={'list'}>
+                {props.advantages.map(item => <p key={item.id} className={item.className}>{item.advantage}</p>)}
             </div>
-            <div className='triangle'/>
         </div>
     )
 };
 
-export default Message;
+export default Advantages;

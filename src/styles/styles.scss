@@ -1,0 +1,23 @@
+@import "./../components/Message/message";
+@import "./../components/Advantages/advantages";
+
+:root {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.App {
+  background: #0E1621;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
