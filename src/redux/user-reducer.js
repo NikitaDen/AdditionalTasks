@@ -1,6 +1,6 @@
 let initialState = {
     fullName: 'Nikita Denisov',
-    messageText: 'Hi, my name is Nikita, and i\'d like to show some presentation about me. There is some of my advantages, check it out!',
+    messageText: 'Hi, myyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy name is Nikita, and i\'d like to show some presentation about me. There is some of my advantages, check it out!',
     messageTime: '23:04',
     advantages: [
         {advantage: 'I', className: 'advantages__item', id: 1},
