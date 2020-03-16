@@ -9,6 +9,9 @@ let Names = () => {
     let [number, setNumber] = useState(0);
     let [text, setText] = useState('');
     let [names, setNames] = useState([]);
+    let [validated, setValidated] = useState(true);
+    let [cls, setCls] = useState('validate');
+
 
     let onClickEvent = () => {
         setNumber(number + 1);
@@ -19,8 +22,8 @@ let Names = () => {
     return (
         <div className='names'>
             <NamesSpan number={number}/>
-            <NamesInput text={text} setText={setText}/>
-            <NamesButton onClickEvent={onClickEvent}/>
+            <NamesInput cls={cls} setCls={setCls} validated={validated} setValidated={setValidated} onClickEvent={onClickEvent} text={text} setText={setText}/>
+            <NamesButton cls={cls} setCls={setCls} validated={validated} setValidated={setValidated} onClickEvent={onClickEvent} text={text}/>
             <NamesItem names={names}/>
         </div>
     )

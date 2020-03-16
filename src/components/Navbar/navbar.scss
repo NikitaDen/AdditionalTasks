@@ -1,0 +1,39 @@
+
+$advantages-color: #182533;
+
+.navbar {
+  position: absolute;
+  left: -12rem;
+  top: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: $advantages-color;
+  border-radius: 5px;
+  width: 12rem;
+  height: auto;
+  padding: .75rem;
+  animation: showMenu 1s ease-out;
+  animation-fill-mode: forwards;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: .5rem;
+
+    &.active {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  }
+
+  @keyframes showMenu {
+    from {
+      left: -12rem;
+    }
+    to {
+      left: 10%;
+    }
+  }
+}
