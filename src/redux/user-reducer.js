@@ -6,9 +6,9 @@ let initialState = {
         {advantage: 'I', className: 'advantages__item', id: 1},
         {advantage: 'don\'t', className: 'advantages__item advantages__item--super', id: 2},
         {advantage: 'know', className: 'advantages__item', id: 3},
-        {advantage: 'I\'m', className: 'advantages__item', id: 3},
-        {advantage: 'too', className: 'advantages__item', id: 3},
-        {advantage: 'shy', className: 'advantages__item', id: 3},
+        {advantage: 'I\'m', className: 'advantages__item', id: 4},
+        {advantage: 'too', className: 'advantages__item', id: 5},
+        {advantage: 'shy', className: 'advantages__item', id: 6},
     ]
 };
 
