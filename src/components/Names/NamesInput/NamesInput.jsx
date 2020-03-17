@@ -1,32 +1,35 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 let NamesInput = (props) => {
 
+    let [text, setText] = useState('');
+
+    useEffect(() => {
+        props.subscribe(addName);
+    }, [text]);
+
+    const addName = () => {
+        if (!text) {
+            return null;
+        }
+        props.addName(text);
+        setText('');
+    };
+
     const handleEnter = (e) => {
         if (e.key === 'Enter') {
-
-            if (!props.text) {
-                return null;
-            }
-
-            props.onClickEvent();
-            props.setText('');
+           addName();
         }
     };
 
-    const setNewText = (e) => {
-        props.setText(e.currentTarget.value);
-        props.setCls('validate');
-    };
-
     const setClassName = () => {
-        let clsName = !props.text ? 'non-validate' : 'validate';
+        let clsName = !text ? 'non-validate' : 'validate';
         props.setCls(clsName);
     };
 
     return (
-        <input className={props.cls} onBlur={setClassName} type="text" value={props.text} placeholder={'Input name...'}
-               onKeyDown={handleEnter} onChange={setNewText}/>
+        <input className={props.cls} onBlur={setClassName} type="text" value={text} placeholder={'Input name...'}
+               onKeyDown={handleEnter} onChange={(e) => setText(e.currentTarget.value)}/>
     )
 };
 

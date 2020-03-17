@@ -7,23 +7,25 @@ import NamesItem from "./NamesItem/NamesItem";
 
 let Names = () => {
     let [number, setNumber] = useState(0);
-    let [text, setText] = useState('');
+    let [funcObject, setFuncObject] = useState({addName: () => {}});
     let [names, setNames] = useState([]);
     let [validated, setValidated] = useState(true);
     let [cls, setCls] = useState('validate');
 
+    const subscribe = (func) => {
+        setFuncObject({addName: func});
+    };
 
-    let onClickEvent = () => {
+    let addName = (text) => {
         setNumber(number + 1);
         setNames([...names, {name: text, id: number}]);
-        setText('');
     };
 
     return (
         <div className='names'>
             <NamesSpan number={number}/>
-            <NamesInput cls={cls} setCls={setCls} validated={validated} setValidated={setValidated} onClickEvent={onClickEvent} text={text} setText={setText}/>
-            <NamesButton cls={cls} setCls={setCls} validated={validated} setValidated={setValidated} onClickEvent={onClickEvent} text={text}/>
+            <NamesInput subscribe={subscribe} cls={cls} setCls={setCls} validated={validated} setValidated={setValidated} addName={addName} />
+            <NamesButton cls={cls} setCls={setCls} validated={validated} setValidated={setValidated} addName={funcObject.addName}/>
             <NamesItem names={names}/>
         </div>
     )
