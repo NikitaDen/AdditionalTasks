@@ -35,7 +35,7 @@ class TodoList extends React.Component {
             priority: 'low',
             id: Date.now(),
             dates: {
-                created: `Created: ${new Date().toLocaleDateString()}\n`,
+                created: `Created: ${new Date().toLocaleString()}\n`,
                 updated: 'Updated: -\n',
                 finished: 'Finished: -',
             }
@@ -58,7 +58,7 @@ class TodoList extends React.Component {
                     priority,
                     dates: {
                         ...item.dates,
-                        updated: `Updated: ${new Date().toLocaleDateString()}\n`,
+                        updated: `Updated: ${new Date().toLocaleString()}\n`,
                     }
                 }
             }
@@ -86,11 +86,11 @@ class TodoList extends React.Component {
                     dates: !isDone ? {
                         ...item.dates,
                         finished: `Finished: -`,
-                        updated: `Updated: ${new Date().toLocaleDateString()}\n`,
+                        updated: `Updated: ${new Date().toLocaleString()}\n`,
                     } : {
                         ...item.dates,
-                        updated: `Updated: ${new Date().toLocaleDateString()}\n`,
-                        finished: `Finished: ${new Date().toLocaleDateString()}`,
+                        updated: `Updated: ${new Date().toLocaleString()}\n`,
+                        finished: `Finished: ${new Date().toLocaleString()}`,
                     }
                 }
             }
