@@ -1,0 +1,38 @@
+.filter-active {
+  background-color: aquamarine;
+}
+
+.error {
+  border-bottom-color: red;
+}
+
+.todoList {
+  width: 500px;
+  margin: 1.5rem auto;
+  color: white;
+
+  &-newTaskForm {
+    input {
+      padding: .15rem;
+      margin: 1rem 1rem 0 0;
+    }
+  }
+
+  &-task {
+    input {
+      margin: .5rem 1rem .5rem 0;
+    }
+
+    select {
+      margin-left: 1rem;
+    }
+
+    &.done {
+      opacity: 0.5;
+    }
+  }
+
+  & > div {
+    padding: 10px;
+  }
+}

@@ -5,6 +5,7 @@ import AdvantagesContainer from "./components/Advantages/AdvantagesContainer";
 import Names from "./components/Names/Names";
 import {Route} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import TodoList from "./components/Tasks/TodoList";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
 
             <Route path={'/tuesday'} render={() =>
                 <>
+                    <TodoList/>
                 </>
             }/>
 
