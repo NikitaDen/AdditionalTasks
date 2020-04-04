@@ -44,6 +44,10 @@ body {
     transform: scale(.95);
   }
 
+  &.filter-active {
+    background-color: blueviolet;
+  }
+
   &--todo {
     border-radius: .5rem;
     background-color: #fb6158;
